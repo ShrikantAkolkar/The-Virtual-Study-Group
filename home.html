@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Home</title>
+
+   <!-- Font Awesome CDN link -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+
+   <!-- Custom CSS file link -->
+   <link rel="stylesheet" href="css/style.css">
+
+   <style>
+      /* Custom CSS */
+      .features {
+         padding: 2rem 0;
+         text-align: center;
+      }
+
+      .features .heading {
+         margin-bottom: 1.5rem;
+         font-size: 2rem;
+      }
+
+      .box-container {
+         display: flex;
+         flex-wrap: wrap;
+         justify-content: center;
+         gap: 2rem;
+      }
+
+      .box {
+         background-color: #f9f9f9;
+         border: 1px solid #ddd;
+         border-radius: 8px;
+         padding: 1.5rem;
+         width: 200px;
+         box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+         transition: transform 0.3s;
+         text-align: center;
+      }
+
+      .box:hover {
+         transform: scale(1.05);
+      }
+
+      .box i {
+         font-size: 2rem;
+         margin-bottom: 0.5rem;
+         color: #007bff;
+      }
+
+      .box h3 {
+         margin: 0.5rem 0;
+         font-size: 1.5rem;
+      }
+
+      .box p {
+         color: #555;
+      }
+
+      .navbar {
+         display: flex;
+         flex-direction: column;
+         gap: 10px;
+      }
+
+      .navbar a {
+         text-decoration: none;
+         color: #333;
+         display: flex;
+         align-items: center;
+         padding: 10px;
+         transition: background 0.3s;
+      }
+
+      .navbar a:hover {
+         background-color: #f0f0f0;
+      }
+
+      .navbar a i {
+         margin-right: 10px;
+      }
+   </style>
+</head>
+<body>
+
+<header class="header">
+   <section class="flex">
+      <a href="home.html" class="logo">Education</a>
+      <form action="search.html" method="post" class="search-form">
+         <input type="text" name="search_box" required placeholder="Search courses..." maxlength="100">
+         <button type="submit" class="fas fa-search"></button>
+      </form>
+      <div class="icons">
+         <div id="menu-btn" class="fas fa-bars"></div>
+         <div id="search-btn" class="fas fa-search"></div>
+         <div id="user-btn" class="fas fa-user"></div>
+         <div id="toggle-btn" class="fas fa-sun"></div>
+      </div>
+      <div class="profile">
+         <img src="images/pic-1.jpg" class="image" alt="Profile Picture">
+         <h3 class="name">Shrikant</h3>
+         <p class="role">Student</p>
+         <a href="profile.html" class="btn">View Profile</a>
+         <div class="flex-btn">
+            <a href="login.html" class="option-btn">Login</a>
+            <a href="register.html" class="option-btn">Register</a>
+         </div>
+      </div>
+   </section>
+</header>   
+
+<div class="side-bar">
+   <div id="close-btn">
+      <i class="fas fa-times"></i>
+   </div>
+   <div class="profile">
+      <img src="images/pic-1.jpg" class="image" alt="Profile Picture">
+      <h3 class="name">Shrikant</h3>
+      <p class="role">Student</p>
+      <a href="profile.html" class="btn">View Profile</a>
+   </div>
+   <nav class="navbar">
+      <a href="home.html"><i class="fas fa-home"></i><span>Home</span></a>
+      <a href="video-Conference.html"><i class="fas fa-question"></i><span>Live Stream Discussion</span></a>
+      <a href="courses.html"><i class="fas fa-graduation-cap"></i><span>Courses</span></a>
+      <a href="teachers.html"><i class="fas fa-chalkboard-user"></i><span>Teachers</span></a>
+      <a href="contact.html"><i class="fas fa-headset"></i><span>Contact Us</span></a>
+   </nav>
+</div>
+
+<section class="home-grid">
+   <h1 class="heading">Quick Options</h1>
+   <div class="box-container">
+      <div class="box">
+         <h3 class="title">Likes and Comments</h3>
+         <p class="likes">Total Likes: <span>25</span></p>
+         <a href="#" class="inline-btn">View Likes</a>
+         <p class="likes">Total Comments: <span>12</span></p>
+         <a href="#" class="inline-btn">View Comments</a>
+         <p class="likes">Saved Playlists: <span>4</span></p>
+         <a href="#" class="inline-btn">View Playlists</a>
+      </div>
+
+      <div class="box">
+         <h3 class="title">Top Categories</h3>
+         <div class="flex">
+            <a href="#"><i class="fas fa-code"></i><span>Development</span></a>
+            <a href="#"><i class="fas fa-chart-simple"></i><span>Business</span></a>
+            <a href="#"><i class="fas fa-pen"></i><span>Design</span></a>
+            <a href="#"><i class="fas fa-chart-line"></i><span>Marketing</span></a>
+            <a href="#"><i class="fas fa-music"></i><span>Music</span></a>
+            <a href="#"><i class="fas fa-camera"></i><span>Photography</span></a>
+            <a href="#"><i class="fas fa-cog"></i><span>Software</span></a>
+            <a href="#"><i class="fas fa-vial"></i><span>Science</span></a>
+         </div>
+      </div>
+
+      <div class="box">
+         <h3 class="title">Popular Topics</h3>
+         <div class="flex">
+            <a href="#"><i class="fab fa-html5"></i><span>HTML</span></a>
+            <a href="#"><i class="fab fa-css3"></i><span>CSS</span></a>
+            <a href="#"><i class="fab fa-js"></i><span>JavaScript</span></a>
+            <a href="#"><i class="fab fa-react"></i><span>React</span></a>
+            <a href="#"><i class="fab fa-php"></i><span>PHP</span></a>
+            <a href="#"><i class="fab fa-bootstrap"></i><span>Bootstrap</span></a>
+         </div>
+      </div>
+
+     <!-- <div class="box">
+         <h3 class="title">Become a Tutor</h3>
+         <p class="tutor"></p>
+         <a href="teachers.html" class="inline-btn">Get Started</a>
+      </div>
+      -->
+   </div>
+</section>
+
+<section class="features">
+   <h1 class="heading">Key Features</h1>
+   <div class="box-container">
+      <div class="box">
+         <i class="fas fa-video"></i>
+         <h3>Video Conferencing</h3>
+         <p>Connect with peers and instructors in real-time through high-quality video calls.</p>
+      </div>
+      <div class="box">
+         <i class="fas fa-share-alt"></i>
+         <h3>Share Resources</h3>
+         <p>Easily share documents, links, and materials with classmates and teachers.</p>
+      </div>
+      <div class="box">
+         <i class="fas fa-comment-dots"></i>
+         <h3>Messaging Tools</h3>
+         <p>Communicate instantly with your peers and instructors via messaging features.</p>
+      </div>
+      <div class="box">
+         <i class="fas fa-users"></i>
+         <h3>Collaborative Tools</h3>
+         <p>Work together on projects and assignments using our collaborative features.</p>
+      </div>
+      <div class="box">
+         <i class="fas fa-calendar-alt"></i>
+         <h3>Scheduling Tools</h3>
+         <p>Manage your time effectively with built-in scheduling and calendar tools.</p>
+      </div>
+   </div>
+</section>
+
+<section class="courses">
+   <h1 class="heading">Our Courses</h1>
+   <div class="box-container">
+      <div class="box">
+         <div class="tutor">
+            <img src="images/pic-2.jpg" alt="Tutor Image">
+            <div class="info">
+               <h3>Yogita</h3>
+               <span>20-10-2024</span>
+            </div>
+         </div>
+         <div class="thumb">
+            <img src="images/thumb-1.png" alt="Course Thumbnail">
+            <span>10 Videos</span>
+         </div>
+         <h3 class="title">Web Development</h3>
+         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis, suscipit?</p>
+         <a href="#" class="inline-btn">Get Started</a>
+      </div>
+
+      <div class="box">
+         <div class="tutor">
+            <img src="images/pic-3.jpg" alt="Tutor Image">
+            <div class="info">
+               <h3>Chinmay</h3>
+               <span>20-10-2024</span>
+            </div>
+         </div>
+         <div class="thumb">
+            <img src="images/thumb-2.png" alt="Course Thumbnail">
+            <span>8 Videos</span>
+         </div>
+         <h3 class="title">Graphic Design</h3>
+         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis, suscipit?</p>
+         <a href="#" class="inline-btn">Get Started</a>
+      </div>
+
+      <div class="box">
+         <div class="tutor">
+            <img src="images/pic-4.jpg" alt="Tutor Image">
+            <div class="info">
+               <h3>Sagar</h3>
+               <span>20-10-2024</span>
+            </div>
+         </div>
+         <div class="thumb">
+            <img src="images/thumb-3.png" alt="Course Thumbnail">
+            <span>12 Videos</span>
+         </div>
+         <h3 class="title">Music Production</h3>
+         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis, suscipit?</p>
+         <a href="#" class="inline-btn">Get Started</a>
+      </div>
+
+      <div class="box">
+         <div class="tutor">
+            <img src="images/pic-5.jpg" alt="Tutor Image">
+            <div class="info">
+               <h3</h3>
+               <span>20-10-2024</span>
+            </div>
+         </div>
+         <div class="thumb">
+            <img src="images/thumb-4.png" alt="Course Thumbnail">
+            <span>6 Videos</span>
+         </div>
+         <h3 class="title">Data Science</h3>
+         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis, suscipit?</p>
+         <a href="#" class="inline-btn">Get Started</a>
+      </div>
+   </div>
+</section>
+
+<footer class="footer">
+   &copy; 2024 Virtual Study Group. | All rights reserved!
+</footer>
+<script src="js/script.js"></script>
+</body>
+</html>

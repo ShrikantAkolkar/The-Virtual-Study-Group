@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Login</title>
+
+   <!-- Font Awesome CDN Link -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+
+   <!-- Custom CSS File Link -->
+   <link rel="stylesheet" href="css/style.css">
+
+   <style>
+      /* Custom CSS for Form Container */
+      .form-container {
+         max-width: 400px;
+         margin: 2rem auto;
+         padding: 2rem;
+         border-radius: 10px;
+         background-color: #f9f9f9;
+         box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      }
+
+      .form-container h3 {
+         text-align: center;
+         margin-bottom: 1.5rem;
+      }
+
+      .form-container .box {
+         width: 100%;
+         padding: 0.5rem;
+         margin-bottom: 1rem;
+         border: 1px solid #ddd;
+         border-radius: 5px;
+         font-size: 1rem;
+      }
+
+      .form-container .btn {
+         width: 100%;
+         padding: 0.5rem;
+         border: none;
+         border-radius: 5px;
+         background-color: #007bff;
+         color: white;
+         font-size: 1rem;
+         cursor: pointer;
+         transition: background-color 0.3s;
+      }
+
+      .form-container .btn:hover {
+         background-color: #0056b3;
+      }
+
+      .form-container .switch-form {
+         text-align: center;
+         margin-top: 1rem;
+      }
+
+      .form-container .switch-form a {
+         color: #007bff;
+         text-decoration: none;
+      }
+   </style>
+</head>
+<body>
+
+<header class="header">
+   <section class="flex">
+      <a href="home.html" class="logo">Education</a>
+      <form action="search.html" method="post" class="search-form">
+         <input type="text" name="search_box" required placeholder="search courses..." maxlength="100">
+         <button type="submit" class="fas fa-search"></button>
+      </form>
+      <div class="icons">
+         <div id="menu-btn" class="fas fa-bars"></div>
+         <div id="search-btn" class="fas fa-search"></div>
+         <div id="user-btn" class="fas fa-user"></div>
+         <div id="toggle-btn" class="fas fa-sun"></div>
+      </div>
+      <div class="profile">
+         <img src="images/pic-1.jpg" class="image" alt="">
+         <h3 class="name">shrikant</h3>
+         <p class="role">student</p>
+         <a href="profile.html" class="btn">view profile</a>
+         <div class="flex-btn">
+            <a href="login.html" class="option-btn">login</a>
+            <a href="register.html" class="option-btn">register</a>
+         </div>
+      </div>
+   </section>
+</header>
+
+<div class="side-bar">
+   <div id="close-btn">
+      <i class="fas fa-times"></i>
+   </div>
+   <div class="profile">
+      <img src="images/pic-1.jpg" class="image" alt="">
+      <h3 class="name">shrikant</h3>
+      <p class="role">student</p>
+      <a href="profile.html" class="btn">view profile</a>
+   </div>
+   <nav class="navbar">
+      <a href="home.html"><i class="fas fa-home"></i><span>home</span></a>
+      <a href="video-Conference.html"><i class="fas fa-question"></i><span>Live Stream Discussion</span></a>
+      <a href="courses.html"><i class="fas fa-graduation-cap"></i><span>courses</span></a>
+      <a href="teachers.html"><i class="fas fa-chalkboard-user"></i><span>teachers</span></a>
+      <a href="contact.html"><i class="fas fa-headset"></i><span>contact us</span></a>
+   </nav>
+</div>
+
+<section class="form-container">
+
+   <form action="" method="post" enctype="multipart/form-data">
+      <h3>Login Now</h3>
+      <p>Your Email <span>*</span></p>
+      <input type="email" name="email" placeholder="Enter your email" required maxlength="50" class="box">
+      <p>Your Password <span>*</span></p>
+      <input type="password" name="pass" placeholder="Enter your password" required maxlength="20" class="box">
+      <input type="submit" value="Login" name="submit" class="btn">
+      <div class="switch-form">
+         <p>New User? <a href="#" id="switch-to-register">Create an account</a></p>
+      </div>
+   </form>
+
+   <form action="" method="post" enctype="multipart/form-data" id="register-form" style="display: none;">
+      <h3>Create Account</h3>
+      <p>Your Name <span>*</span></p>
+      <input type="text" name="name" placeholder="Enter your name" required maxlength="50" class="box">
+      <p>Your Email <span>*</span></p>
+      <input type="email" name="email" placeholder="Enter your email" required maxlength="50" class="box">
+      <p>Your Password <span>*</span></p>
+      <input type="password" name="pass" placeholder="Create a password" required maxlength="20" class="box">
+      <p>Confirm Password <span>*</span></p>
+      <input type="password" name="confirm_pass" placeholder="Confirm your password" required maxlength="20" class="box">
+      <input type="submit" value="Create Account" name="register" class="btn">
+      <div class="switch-form">
+         <p>Already have an account? <a href="#" id="switch-to-login">Login</a></p>
+      </div>
+   </form>
+
+</section>
+
+<footer class="footer">
+   &copy; copyright @ 2024 Virtual Study Group. All rights reserved!
+</footer>
+
+<!-- Custom JS File Link -->
+<script src="js/script.js"></script>
+
+<script>
+   // JavaScript to switch between login and registration forms
+   document.getElementById('switch-to-register').onclick = function() {
+      document.querySelector('form[action=""]').style.display = 'none'; // Hide login form
+      document.getElementById('register-form').style.display = 'block'; // Show register form
+   };
+
+   document.getElementById('switch-to-login').onclick = function() {
+      document.getElementById('register-form').style.display = 'none'; // Hide register form
+      document.querySelector('form[action=""]').style.display = 'block'; // Show login form
+   };
+</script>
+
+</body>
+</html>
